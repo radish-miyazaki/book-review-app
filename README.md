@@ -1,6 +1,8 @@
 ## BookReviewApp
 
-This repository to learn svelte.js for me.
+This repository to learn svelte + TypeScript.
+
+---
 
 **This tutorial is made by azukiazusa.
 Please visit below link and click like button!**
