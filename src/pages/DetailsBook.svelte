@@ -18,14 +18,11 @@
     storeBooks.add([book])
   }
 
-  console.log(findById(params.id).then(res => console.log(res)))
-
   // storeの中にparam_queryで渡ってきたIDと同じものがあればそれを取得する
   book = find(params.id)
   if (!book) {
     promise = findById(params.id)
   }
-  console.log(book)
 </script>
 
 <div>
