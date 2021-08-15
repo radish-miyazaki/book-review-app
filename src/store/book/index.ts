@@ -1,4 +1,4 @@
-import { writable } from "svelte/store";
+import { writable, derived } from "svelte/store";
 import type { BookItem } from "../../repositories/book";
 
 // INFO: subscribeのみを返しており、set()を返していないので、更新できない。
@@ -20,3 +20,9 @@ const useBookStore = () => {
 }
 
 export const storeBooks = useBookStore()
+
+// INFO: storeBooksからidが同じ変数を返却する
+//  derived: writableの値から他の値を取得する関数。getters関数。
+export const find = (id: string) => {
+  return derived(storeBooks, $storeBooks => $storeBooks.find(book => book.id === id))
+}

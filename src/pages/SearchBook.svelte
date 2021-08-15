@@ -64,7 +64,7 @@
     <div>No results ...</div>
   {:else}
     <div class="grid grid-cols-1 gap-2 lg:grid-cols-2">
-      {#each $storeBooks as book (book.id)}
+      {#each $storeBooks as book, index (index)}
         <BookCard {book} />
       {/each}
     </div>
